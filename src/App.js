@@ -11,11 +11,17 @@ const foodLike = [
   }
 ]
 
+function renderFood(dish) {
+  return(
+    <Food name={dish.name} picture={dish.image}/>
+  )
+}
+
 function App() {
   return (
     <div>
       {
-      foodLike.map(dish =>  (<Food name={dish.name} picture={dish.image}/>))
+      foodLike.map(renderFood)
       }
     </div>
   )
