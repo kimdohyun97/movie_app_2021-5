@@ -6,7 +6,7 @@
 
 Props: 컴포넌트에서 컴포넌트로 전달하는 데이터를 말한다.<br>
 
-[Window + . ] = 이모티콘<br>
+[Window + . ] = 이모티콘 단축키<br>
 
 Potato 컴포넌트 만들기
 
@@ -22,7 +22,7 @@ function Potato(){
 <br>
 
 Potato 컴포넌트 사용<br>
-- App 옆에 Potato 추가
+-App 옆에 Potato 추가
 
 ```jsx
 import ReactDOM from 'react-dom';
@@ -30,9 +30,68 @@ import App from './App';
 
 ReactDOM.render( <App /> <Potato/>, document.getElementById('root'));
 ```
+여러개의 props 사용하기
 
+```jsx
+<Food fav="kimchi" /> //3번 호출, 각자 출력
+<Food fav="ramen" />
+<Food fav="cookie" />
+```
+<br>
+음식 데이터 만들기 <br>
 
+```jsx
+const foodILike = [
+  {
+    name: "chicken",
+    image: "https://health.chosun.com/site/data/img_dir/2021/03/31/2021033102448_0.jpg"
+  },
+  {
+    name: "pizza",
+    image: "https://src.hidoc.co.kr/image/lib/2020/11/9/1604911318873_0.jpg"
+  }
+]
+```
 
+음식 이미지 출력하기<br>
+```jsx
+<Food name={dish.name} picture={dish.image} />
+```
+<br>
+
+이미지 출력을 위해 img tag 추가하기<br>
+```jsx
+function Food({name, picture}) { //picture 추가
+    return (
+        <div>
+        <h2>I like {name} <h2/> 
+        <img src={picture} /> 
+        </div>
+    ) 
+}
+```
+<br>
+Food 컴포넌트에 key props 추가하기<br>
+
+```jsx
+function App() {
+  return (
+    <div>
+      {
+      foodLike.map(dish => 
+      (<Food key={dish.id} name={dish.name} picture={dish.image}/>)) 
+      }     
+    </div>
+  )
+}
+```
+<br>
+img 엘리먼트에 alt 속성 추가하기<br>
+- alt속성을 하나씩 넣을수 없기 때문에 {name}을 대입해준다. 
+
+```jsx
+<img src={picture} alt={name}/> // alt={name} 추가
+```
 
 ***
 
