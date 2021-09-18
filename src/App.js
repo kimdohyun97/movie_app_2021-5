@@ -11,11 +11,13 @@ const foodLike = [
   }
 ]
 
-function renderFood(dish) {
-  return(
-    <Food name={dish.name} picture={dish.image}/>
-  )
-}
+// function renderFood(dish) {
+//   return(
+//     <Food name={dish.name} picture={dish.image}/>
+//   )
+// }
+
+const renderFood = dish => <Food name={dish.name} picture={dish.image}/>
 
 function App() {
   return (
