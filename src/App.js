@@ -14,13 +14,15 @@ const foodLike = [
 function App() {
   return (
     <div>
-      {foodLike.map(dish =>  (<Food key={dish.id} name={dish.name} picture={dish.image} />))}
+      {
+      foodLike.map(dish =>  (<Food name={dish.name} />))
+      }
     </div>
   )
 }
 
-function Food() {
-  return <h1>I like potato</h1>
+function Food({name}) {
+  return <h1>I like {name}</h1>
 }
 
 export default App;
