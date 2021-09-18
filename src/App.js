@@ -10,6 +10,7 @@ const foodLike = [
     image: "http://image.newdaily.co.kr/site/data/img/2017/07/10/2017071010070_0.jpg"
   }
 ]
+
 function App() {
   return (
     <div>
@@ -24,7 +25,7 @@ function Food({name, picture}) {
   return(
     <div>
     <h1>I like {name}</h1>
-    <img src={picture} />
+    <img src={picture} alt={name} />
    </div>
   )
 }
