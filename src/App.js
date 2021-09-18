@@ -8,8 +8,9 @@ function App() {
   )
 }
 
-function Food() {
-return <h1>I like potato</h1>
+function Food(props) {
+  console.log(props)
+  return <h1>I like potato</h1>
 }
 
 export default App;
