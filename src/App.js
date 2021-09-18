@@ -8,7 +8,8 @@ function App() {
   )
 }
 
-function Movie()
+function Movie() {
 return <h1>I like potato</h1>
+}
 
 export default App;
