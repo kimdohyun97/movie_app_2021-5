@@ -10,21 +10,11 @@ const foodLike = [
     image: "http://image.newdaily.co.kr/site/data/img/2017/07/10/2017071010070_0.jpg"
   }
 ]
-
-// function renderFood(dish) {
-//   return(
-//     <Food name={dish.name} picture={dish.image}/>
-//   )
-// }
-
-const renderFood = dish => <Food name={dish.name} picture={dish.image}/>
-
 function App() {
-  console.log(foodLike.map(renderFood))
   return (
     <div>
       {
-      foodLike.map(renderFood)
+      foodLike.map(dish => (<Food key={dish.id} name={dish.name} picture={dish.image}/>))
       }
     </div>
   )
