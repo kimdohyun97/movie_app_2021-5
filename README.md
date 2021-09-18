@@ -8,6 +8,32 @@ Props: 컴포넌트에서 컴포넌트로 전달하는 데이터를 말한다.<b
 
 [Window + . ] = 이모티콘<br>
 
+Potato 컴포넌트 만들기
+
+```jsx
+function Potato(){
+ return(
+  <h1>I love potato</h1>
+ )
+
+ export default Potato
+}
+```
+<br>
+
+Potato 컴포넌트 사용<br>
+- App 옆에 Potato 추가
+
+```jsx
+import ReactDOM from 'react-dom';
+import App from './App';
+
+ReactDOM.render( <App /> <Potato/>, document.getElementById('root'));
+```
+
+
+
+
 ***
 
 ## [ 09월 08일 ]
