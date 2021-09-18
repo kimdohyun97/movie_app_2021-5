@@ -20,6 +20,7 @@ const foodLike = [
 const renderFood = dish => <Food name={dish.name} picture={dish.image}/>
 
 function App() {
+  console.log(foodLike.map(renderFood))
   return (
     <div>
       {
