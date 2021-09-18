@@ -15,14 +15,19 @@ function App() {
   return (
     <div>
       {
-      foodLike.map(dish =>  (<Food name={dish.name} />))
+      foodLike.map(dish =>  (<Food name={dish.name} picture={dish.image}/>))
       }
     </div>
   )
 }
 
-function Food({name}) {
-  return <h1>I like {name}</h1>
+function Food({name, picture}) {
+  return(
+    <div>
+    <h1>I like {name}</h1>
+    <img src={picture} />
+   </div>
+  )
 }
 
 export default App;
