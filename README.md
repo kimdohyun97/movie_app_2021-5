@@ -1,5 +1,21 @@
 # 김도현 201640105
 
+## [ 09월 29일 ]
+
+Master branch를 main branch로 변경<br>
+master를 사용하지 않게 된 이유는 'Black Lives Matter'운동에 발맞춰 주종관계를 뜻하는<br> 'maser', 'slave' 를 다른 단어로 대체하기 위해서이다.<br>
+- main 으로 변경
+```
+git config --global init.defaultBranch main
+``` 
+상대경로 이미지 삽입 방법<br>
+- public 폴더에 images 폴더를 생성<br> 
+```
+<img src="image/[이미지이름]"> 형태로 태그 작성
+```
+
+***
+
 학습 내용
 
 ## [ 09월 15일 ]
