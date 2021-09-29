@@ -1,9 +1,12 @@
 import {Component} from "react"
 
 class App extends Component {
+    state = {
+        count: 0,
+    }
     render() {
         return (
-            <h1>Hello</h1>
+            <h1>The number is: {this.state.count} </h1>
         )
     }
 }
