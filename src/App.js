@@ -10,7 +10,7 @@ class App extends Component {
         console.log('componentDidMount');
     }
     componentDidUpdate() {
-        console.log('componentDidUpdate');
+        console.log('componentDidUpdate...GoodBye');
     }
 
     state = {
