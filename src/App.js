@@ -9,6 +9,10 @@ class App extends Component {
     componentDidMount() {
         console.log('componentDidMount');
     }
+    componentDidUpdate() {
+        console.log('componentDidUpdate');
+    }
+
     state = {
         count: 0,
     }
