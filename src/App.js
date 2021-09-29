@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types'
+
 const foodLike = [
   {
     id: 1,
