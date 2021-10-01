@@ -13,6 +13,57 @@ git config --global init.defaultBranch main
 ```
 <img src="image/[이미지이름]"> 형태로 태그 작성
 ```
+prop-types 설치<br>
+```
+npm install prop-types
+```
+state로 숫자 증감 기능 만들기
+- props는 정적인 데이터만 다룰수 있다.
+- state는 동적인 데이터를 다루기 위해 사용된다.
+- state는 class형 컴포넌트에서 사용 <br>
+
+state에 count값 추가<br>
+```jsx
+
+class App extends Component {
+  state = {
+    count: 0
+  }
+  render() {
+    return (
+      <h1> The number is: {this.state.count} </h1>
+    )
+  }
+}
+```
+constructor() 함수 알아보기<br>
+- 클래스 내에 constructor()(생성자)함수를 선언하고, console.log()함수를 이용해 문장을 출력한다.
+- 이것은 어떤 문장이 먼저 실행되는지 비교해보기 위해서이다.<br>
+
+생성자란 무엇인가<br>
+- constructor()는 Component를 생성할때 state 값을 초기화하거나 메서드를 바인딩할때 사용한다.<br>
+- 생성자 내에서는 setState를 사용하지 않고, this.state를 사용하여 state의 초기값을 할당한다.<br>
+- 생성자 내에서는 외부API를 직접 호출할수 없다. 필요하다면 componentDidMount()를 사용한다.<br>
+- 자바스크립트에서 super 부모클래스 생성자의 참조한다는 의미이다.<br>
+
+componentDidMount()함수 , componentDidUpdate()함수 <br>
+```jsx
+class App extends Component {
+    constructor(props) {
+        super(props)
+        console.log('constructor')
+    }
+    
+    componentDidMount() {
+        console.log('componentDidMount');
+    }
+    componentDidUpdate() {
+        console.log('componentDidUpdate...GoodBye');
+    }
+```
+### 생명주기함수
+![리액트 기초 개념](https://blogfiles.pstatic.net/MjAyMTEwMDFfNDcg/MDAxNjMzMDYzODg1MjU3.XwWd_q9e_SrYA1WMelPI5CchWDaEcD1SRzzXZQOlL2cg.zpNifQhAnV-tp2RSXj_WkbjAuTsp8bQsKf8sZe4T1F4g.PNG.alsl970/%EC%83%9D%EB%AA%85%EC%A3%BC%EA%B8%B0%ED%95%A8%EC%88%98.PNG)<br>
+
 
 ***
 
