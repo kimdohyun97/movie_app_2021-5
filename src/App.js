@@ -1,11 +1,14 @@
 import React from "react"
 
 class App extends React.Component {
-    state
+    state = {
+        isLoading: true
+    }
     render() {
+        const { isLoading } = this.state
         return(
             <div>
-                <h1>Hello!</h1>
+                {isLoading ? 'Loading...': '영화 데이터 출력'}
             </div>
         )
     }
