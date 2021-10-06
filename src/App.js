@@ -8,7 +8,7 @@ class App extends React.Component {
     }
 
     componentDidMount() {
-        axios.get("https://yts.proxy.now.sh/list_movie.json")
+        axios.get("https://yts.mx/api/v2/list_movies.json")
     }
 
     render() {
