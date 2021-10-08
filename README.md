@@ -1,5 +1,49 @@
 # 김도현 201640105
 
+## [ 10월 06일]
+
+axios 설치<br>
+터미널에 'npm install axios' 입력<br>
+
+영화 API를 영화 앱에 호출하기
+```jsx
+import axios from "axios"
+
+componnentDidMount() {
+  axios.get('http://yts.mx/api/v2/list_moives.json')
+}
+```
+axios 동작 확인<br>
+브라우저 F12 > Network 탭열고 새로고침(Crtl+F5)<br>
+
+getMovies()에 async 붙이고, axios.get()에 await붙이기<br>
+- 시간이 필요하다는 것을 알리기 위해서는 async, await 키워드가 필요
+- 자바스크립트에게 시간이 필요하다는것을 알리려면 async를 ()앞에 붙이고,
+- 실제 시간이 필요한 대상인 axios.get()함수에는 await을 붙인다. 
+```jsx
+getMovies = async () => {
+    const movies = await axios.get("https://yts.mx/api/v2/list_movies.json")
+    }
+componnentDidMount() {
+    this.getMovies()
+    }
+```
+객체에 있는 movies 키에 조금더 똑똑하게 접근하기.<br>
+- 구조 분해 할당
+```jsx
+getMovies = async () => {
+    const {
+        data: {
+            data: {movies}
+        }
+    } = await axios.get("https://yts.mx/api/v2/list_movies.json")
+        // const movies 
+     console.log(movies);
+}
+```
+
+***
+
 ## [ 09월 29일 ]
 
 Master branch를 main branch로 변경<br>
