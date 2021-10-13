@@ -26,13 +26,13 @@ class App extends React.Component {
     render() {
         const { isLoading, movies } = this.state
         return(
-            <section class='container'>
+            <section className='container'>
                 { isLoading ? (
-                    <div class='loader'>
-                        <span class='loader-text'>Loading...</span>
+                    <div className='loader'>
+                        <span className='loader-text'>Loading...</span>
                     </div>
                 ) : (
-                  <div>
+                  <div className='movies'>
                      {
                         movies.map((movie) => {
                         console.log(movie)
@@ -43,7 +43,8 @@ class App extends React.Component {
                             year = {movie.year}
                             title = {movie.title}
                             summary = {movie.summary}
-                            poster = {movie.poster}
+                            poster = {movie.medium_cover_image}
+                            genres = {movie.genres}
                             /> 
                          )})} 
                   </div>    
