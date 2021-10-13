@@ -1,15 +1,18 @@
-import { getByTitle } from '@testing-library/react'
 import PropTypes from 'prop-types'
 
 function Movie({id, year, title, summary, poster}) {
     return (
-        <h4>{title}</h4>
+        <div>
+            <h3>{title}</h3>
+            <h5>{year}</h5>
+            <p>{summary}</p>
+        </div>
     )
 }
 
 Movie.propTypes = {
    id: PropTypes.number.isRequired,
-   year: PropTypes.string.isRequired,
+   year: PropTypes.number.isRequired,
    title: PropTypes.string.isRequired,
    summary: PropTypes.string.isRequired,
    poster: PropTypes.string.isRequired
