@@ -1,5 +1,6 @@
 import React from "react"
 import axios from "axios"
+import Movie from "./Moive"
 
 class App extends React.Component {
     state = {
@@ -22,10 +23,15 @@ class App extends React.Component {
     }
 
     render() {
-        const { isLoading } = this.state
+        const { isLoading, movies } = this.state
         return(
             <div>
-                {isLoading ? 'Loading...': '영화 데이터 출력'}
+                {isLoading 
+                ? 'Loading...'
+                : movies.map((movie) => {
+                    console.log(movie)
+                    return <Movie />
+                })}
             </div>
         )
     }
