@@ -1,6 +1,35 @@
 # 김도현 201640105
 
 ## [ 10월 13일]
+moives state에 영화 데이터 저장<br>
+console 부분은 삭제<br>
+```jsx
+this.setState({movies:moives}) 추가
+```
+isLoading true -> false<br>
+```jsx
+this.setState({movies, isLoading: false})
+```
+App,Movie 컴포넌트 CSS파일 import<br>
+```jsx
+import "./Movie.css"
+import "./App.css"
+```
+style속성으로 스타일링<br>
+```jsx
+<h3 class ='movie-title' style={{ backgroundColor: 'red' }}>{title}</h3>
+```
+영화 포스터 이미지 추가<br>
+- 전체 tag를 감싸는 div tag(class="movie")를 추가<br>
+- img tag를 그아래 추가 src속성에는 poster props를,alt 속성에는 title props를 전달<br>
+```jsx
+  <div class ="movie">
+    <img src={poster} alt={title} title={title} />
+  </div>
+```
+
+
+
 ***
 ## [ 10월 06일]
 
