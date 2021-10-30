@@ -1,6 +1,6 @@
 import React from "react"
 import axios from "axios"
-import Movie from "./Moive"
+import Movie from "./components/Moive"
 import "./App.css"
 
 class App extends React.Component {
@@ -35,7 +35,6 @@ class App extends React.Component {
                   <div className='movies'>
                      {
                         movies.map((movie) => {
-                        console.log(movie)
                          return (
                             <Movie 
                             key = {movie.id}
