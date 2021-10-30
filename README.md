@@ -1,4 +1,42 @@
 # 김도현 201640105
+## [ 10월 30일]
+영화 장르 출력하기
+- genres props가 배열이므로 map()함수 사용
+```jsx
+<ul className='movie-genres'>
+  {genres.map((genre) =>{
+      return (
+        <li className='movie-genre'>{genre} </li>
+      )
+    })
+  }
+</ul>
+```
+li tag에 key props 추가하기
+```jsx
+<ul className='movie-genres'>
+    {genres.map((genre, index) =>{
+        return (
+            <li key={index} className='movie-genre'>{genre} </li>
+        )
+    })}
+</ul>
+```
+## react-router-dom 설치 <br>
+- npm install react-router-dom <br>
+
+Home 컴포넌트를 위한 Route 컴포넌트 추가
+```jsx
+function App() {
+    return (
+        <HashRouter>
+            <Route path="/" exact={true} component={Home} />
+            <Route path=' /about' component={About} />
+        </HashRouter>
+    )
+}
+```
+***
 
 ## [ 10월 13일]
 moives state에 영화 데이터 저장<br>
