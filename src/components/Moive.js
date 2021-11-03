@@ -18,6 +18,7 @@ function Movie({year, title, summary, poster, genres}) {
                         )
                     })}
                 </ul>
+                <p className='movie-summary'>{ summary }</p>
             </div>
             </Link>
         </div>
