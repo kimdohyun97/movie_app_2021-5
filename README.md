@@ -1,4 +1,57 @@
 # 김도현 201640105
+## [ 11월 3일 ]
+
+링크걸기
+```jsx
+import { Link } from "react-router-dom"
+
+function Navigation() {
+    return (
+        <div>
+        <Link to='/'>Home</Link>
+        <Link to='/about'>About</Link>
+        </div>
+    )
+}
+``` 
+영화 상세정보 기능 만들기<br>
+route props를 사용<br>
+• 먼저 consol.log()를 통해 About으로 어떤 props가 넘어오는지 확인한다. <br>
+• react-router-dom에서 Route 컴포넌트가 그려줄 컴포넌트에 전달한 props를 확인할 수 있다.<br> 
+• Route 컴포넌트가 그려줄 컴포넌트에는 항상 이 props가 전달되며, 이 props는 원하는 데이터를 담
+아 보낼 수 있다.
+```jsx
+function About(props) {
+    console.log(props)
+```
+
+리다이렉트 기능<br>
+• 리다이렉트 기능을 사용하기 위해서는 route props의 history 키를 활용해야 한다. <br>
+• history키에는 push, go, goBack, goForward와 같은 키가 있으며, 그 키에는 URL을 변경해 주는 함수들이 있다.<br> 
+• 이 함수들을 이용해서 리다이렉트 기능을 구현한다.
+
+push() 함수 사용하기
+```jsx
+class Detail extends React.Component {
+    componentDidMount() {
+        const { location, history } =this.props
+        if ( location.state === undefined ) {
+            history.push('/')
+        }
+    }
+```
+영화 제목 출력하기
+```jsx
+    render () {
+        const { location } = this.props
+        return (
+        <span>{location.state.title}</span>
+        )
+    }
+}
+```
+***
+
 ## [ 10월 27일]
 영화 장르 출력하기
 - genres props가 배열이므로 map()함수 사용
