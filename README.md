@@ -2,6 +2,8 @@
 ## [ 11월 10일 ]
 package.json 수정 <br>
 ```jsx
+"predeploy": "npm run build", 추가
+"deploy": "gh-pages -d build" 추가
 "homepage": "https://kimdohyun97.github.io/movie_app_2021-5" 추가
 ```
 gh -pages 설치하기<br>
