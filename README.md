@@ -1,5 +1,6 @@
 # 김도현 201640105
 ## [ 11월 10일 ]
+### 배포하기<br>
 package.json 수정 <br>
 ```jsx
 "predeploy": "npm run build", 추가
@@ -9,6 +10,45 @@ package.json 수정 <br>
 gh -pages 설치하기<br>
 - 깃허브에서 제공하는 GitHub Pages서비스로 영화 앱을 배포<br>
 - npm install gh-pages 터미널에서 설치 <br>
+
+npm run deploy 터미널에서 실행<br>
+
+상태를 가지는 컴포넌트<br>
+```jsx
+class Timer extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { seconds: 0 };
+  }
+
+  tick() {
+    this.setState(state => ({
+      seconds: state.seconds + 1
+    }));
+  }
+
+  componentDidMount() {
+    this.interval = setInterval(() => this.tick(), 1000);
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.interval);
+  }
+
+  render() {
+    return (
+      <div>
+        Seconds: {this.state.seconds}
+      </div>
+    );
+  }
+}
+
+ReactDOM.render(
+  <Timer />,
+  document.getElementById('timer-example')
+);
+```
 ***
 ## [ 11월 3일 ]
 
