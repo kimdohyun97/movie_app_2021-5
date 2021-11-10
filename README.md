@@ -1,4 +1,13 @@
 # 김도현 201640105
+## [ 11월 10일 ]
+package.json 수정 <br>
+```jsx
+"homepage": "https://kimdohyun97.github.io/movie_app_2021-5" 추가
+```
+gh -pages 설치하기<br>
+- 깃허브에서 제공하는 GitHub Pages서비스로 영화 앱을 배포<br>
+- npm install gh-pages 터미널에서 설치 <br>
+***
 ## [ 11월 3일 ]
 
 링크걸기
