@@ -1,4 +1,25 @@
 # 김도현 201640105
+## [ 11월 17일 ]
+Todo list<br>
+- todoApp과 todoList 두개의 컴포넌트로 구성
+- handleChange는 모든 키보드 입력마다 React의 state를 갱신해서 보여준다.
+- 유저입력 > handleChange > React의 state갱신 > form element가 React state를 참조
+```jsx
+handleChange(event) {
+  this.setState({value: event.target.value.toUpperCase()});
+}
+```
+handleSubmit(e)에서 e.preventDefault()메소드를 사용하는 이유<br>
+브라우저에서 양식을 제출할 때는 기본적으로 브라우저의 새로고침이 발생하는데<br>
+React나 SPA(single page application)의 경우 필요가 없는 동작임으로 이를<br>
+방지하기 위해 사용한다.<br>
+1. state.text의 길이가 0이면 아무것도 반환하지 않는다.<br>
+2. 0이 아니면 newitem에 입력받은 text와 현재시간을 저장한다.<br>
+
+### remarkable<br>
+- npm install remarkable
+- import { Remarkable } from 'remarkable';
+***
 ## [ 11월 10일 ]
 ### 배포하기<br>
 package.json 수정 <br>
