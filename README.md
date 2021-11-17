@@ -19,6 +19,51 @@ React나 SPA(single page application)의 경우 필요가 없는 동작임으로
 ### remarkable<br>
 - npm install remarkable
 - import { Remarkable } from 'remarkable';
+
+```jsx
+import React from 'react'
+import { Remarkable } from 'remarkable';
+
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.md = new Remarkable();
+    this.handleChange = this.handleChange.bind(this);
+    this.state = { value: 'Hello, **world**!' };
+  }
+
+  handleChange(e) {
+    this.setState({ value: e.target.value });
+  }
+
+  getRawMarkup() {
+    return { __html: this.md.render(this.state.value) };
+  }
+
+  render() {
+    return (
+      <div className="MarkdownEditor">
+        <h3>Input</h3>
+        <label htmlFor="markdown-content">
+          Enter some markdown
+        </label> <br />
+        <textarea
+          id="markdown-content"
+          onChange={this.handleChange}
+          defaultValue={this.state.value}
+        />
+        <h3>Output</h3>
+        <div
+          className="content"
+          dangerouslySetInnerHTML={this.getRawMarkup()}
+        />
+      </div>
+    );
+  }
+}
+
+export default App;
+```
 ***
 ## [ 11월 10일 ]
 ### 배포하기<br>
