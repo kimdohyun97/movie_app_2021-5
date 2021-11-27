@@ -1,4 +1,62 @@
 # 김도현 201640105
+
+## [ 11월 24일 ]
+React 시도해보기
+- React는 처음부터 점진적으로 적용할 수 있도록 설계되었으며 필요한 만큼 React를 사용할 수 있습니다. 
+- React를 맛보기로 접해보거나 간단한 HTML 페이지에 약간의 대화형 기능(interactivity)을 추가하거나 복잡한 React 기반의 앱을 시작하고자 하는 경우, 이 섹션의 링크를 통해 시작할 수 있습니다<br>
+
+JSX란?
+
+- React에서는 본질적으로 렌더링 로직이 UI 로직(이벤트가 처리되는 방식, 시간에 따라 state가 변하는 방식, 화면에 표시하기 위해 데이터가 준비되는 방식 등)과 연결된다는 사실을 받아들입니다.
+- React는 JSX 사용이 필수가 아니지만, 대부분의 사람은 JavaScript 코드 안에서 UI 관련 작업을 할 때 시각적으로 더 도움이 된다고 생각합니다. <br>
+
+엘리먼트 렌더링
+
+```jsx
+const element = <h1>Hello, world</h1>;
+```
+React 엘리먼트를 루트 DOM 노드에 렌더링하려면 둘 다 ReactDOM.render()로 전달
+```jsx
+const element = <h1>Hello, world</h1>;
+ReactDOM.render(element, document.getElementById('root'));
+```
+
+컴포넌트 합성
+```jsx
+function Welcome(props) {
+  return <h1>Hello, {props.name}</h1>;
+}
+
+function App() {
+  return (
+    <div>
+      <Welcome name="Sara" />
+      <Welcome name="Cahal" />
+      <Welcome name="Edite" />
+    </div>
+  );
+}
+```
+
+함수에서 클래스로 변환
+- React.Component를 확장하는 동일한 이름의 ES6 class를 생성합니다.
+- render()라고 불리는 빈 메서드를 추가합니다. 함수의 내용을 render() 메서드 안으로 옮깁니다.
+- render() 내용 안에 있는 props를 this.props로 변경합니다.
+- 남아있는 빈 함수 선언을 삭제합니다.
+```jsx
+class Clock extends React.Component {
+  render() {
+    return (
+      <div>
+        <h1>Hello, world!</h1>
+        <h2>It is {this.props.date.toLocaleTimeString()}.</h2>
+      </div>
+    );
+  }
+}
+```
+
+***
 ## [ 11월 17일 ]
 Todo list<br>
 - todoApp과 todoList 두개의 컴포넌트로 구성
