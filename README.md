@@ -1,5 +1,26 @@
 # 김도현 201640105
+## [ 12월 01일 ]
+state와 생명주기<br>
+함수에서 클래스로 변환하기<br>
+- React.Component를 확장하는 동일한 이름의 ES6 class를 생성합니다.
+- render()라고 불리는 빈 메서드를 추가합니다.
+- 함수의 내용을 render() 메서드 안으로 옮깁니다.
+- render() 내용 안에 있는 props를 this.props로 변경합니다.
+- 남아있는 빈 함수 선언을 삭제합니다.
+```jsx
+class Clock extends React.Component {
+  render() {
+    return (
+      <div>
+        <h1>Hello, world!</h1>
+        <h2>It is {this.props.date.toLocaleTimeString()}.</h2>
+      </div>
+    );
+  }
+}
+```
 
+***
 ## [ 11월 24일 ]
 React 시도해보기
 - React는 처음부터 점진적으로 적용할 수 있도록 설계되었으며 필요한 만큼 React를 사용할 수 있습니다. 
