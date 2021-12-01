@@ -23,7 +23,7 @@ State 올바르게 사용하기<br>
 직접 수정하지 말기 / this.state를 지정할수 있는 유일한 공간은 바로 constructor입니다.<br>
 State 업데이트는 비동기적일수 있습니다.<br>
 - React는 성능을 위해 여러 setState() 호출을 단일 업데이트로 한꺼번에 처리할 수 있습니다.
-- this.props와 this.state가 비동기적으로 업데이트될 수 있기 때문에 다음 state를 계산할 때 해당 값에 의존해서는 안 됩니다.
+- this.props와 this.state가 비동기적으로 업데이트될 수 있기 때문에 다음 state를 계산할 때 해당 값에 의존해서는 안 됩니다.<br>
 State 업데이트는 병합됩니다.<br>
 setState()를 호출할 때 React는 제공한 객체를 현재 state로 병합합니다.
 ```jsx
@@ -36,7 +36,7 @@ setState()를 호출할 때 React는 제공한 객체를 현재 state로 병합�
   }
 ```
 별도의 setState() 호출로 이러한 변수를 독립적으로 업데이트할 수 있습니다.
-- 병합은 얕게 이루어지기 때문에 this.setState({comments})는 this.state.posts에 영향을 주진 않지만 this.state.comments는 완전히 대체됩니다.
+- 병합은 얕게 이루어지기 때문에 this.setState({comments})는 this.state.posts에 영향을 주진 않지만<br> this.state.comments는 완전히 대체됩니다.
 ```jsx
   componentDidMount() {
     fetchPosts().then(response => {
