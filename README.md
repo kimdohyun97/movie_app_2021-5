@@ -1,4 +1,29 @@
 # 김도현 201640105
+
+## [ 12월 08일 ]
+이벤트 처리하기<br>
+React 엘리먼트에서 이벤트를 처리하는 방식은 DOM 엘리먼트에서 이벤트를 처리하는 방식과 매우 유사합니다.<br> 
+몇 가지 문법 차이는 다음과 같습니다<br>
+- React의 이벤트는 소문자 대신 캐멀 케이스(camelCase)를 사용합니다.
+- JSX를 사용하여 문자열이 아닌 함수로 이벤트 핸들러를 전달합니다.<br>
+
+여기서 e는 합성이벤트입니다.
+```jsx
+function Form() {
+  function handleSubmit(e) {
+    e.preventDefault();
+    console.log('You clicked submit.');
+  }
+
+  return (
+    <form onSubmit={handleSubmit}>
+      <button type="submit">Submit</button>
+    </form>
+  );
+}
+```
+
+***
 ## [ 12월 01일 ]
 State와 생명주기<br>
 함수에서 클래스로 변환하기<br>
